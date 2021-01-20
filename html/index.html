@@ -6,7 +6,7 @@
 </head>
 <body>
     <script>
-        const source = new EventSource('http://localhost:8080/sse')
+        const source = new EventSource('http://localhost:8080/user?sse=1')
         source.onmessage = (ev) => {
             console.log(ev.data)
         }
