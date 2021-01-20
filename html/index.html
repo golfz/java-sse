@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Server-Sent Events</title>
+</head>
+<body>
+    <script>
+        const source = new EventSource('http://localhost:8080/sse')
+        source.onmessage = (ev) => {
+            console.log(ev.data)
+        }
+    </script>
+</body>
+</html>
